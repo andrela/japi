@@ -13,13 +13,7 @@
    echo $dateheure;
    $date=strftime("%d/%m/%Y");
 
-$conn_string = "host=localhost port=5432 dbname=bastide user=andre password=loboG69";
-		$dbconn = pg_pconnect($conn_string);
-
-		if (!$dbconn) {
-		echo "An error occured.\n";
-		exit;
-		}
+include('bastide.php');
 echo "<a href=http://debian/cultures/filtres/semences.php>Retour</a>";
 ?>
 <div align="center">

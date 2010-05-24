@@ -23,13 +23,8 @@ echo '<ul class="nav main">
 <br>';
 ?>
 <?php
-$conn_string = "host=localhost port=5432 dbname=bastide user=andre password=loboG69";
-$dbconn = pg_pconnect($conn_string);
+include('bastide.php');
 
-if (!$dbconn) {
-    echo "An error occured.\n";
-    exit;
-}
 // Premier tri ordonné du semis à la planche si un semis est sélectionné
 // Le semis est soit sélectionné donc supérieur à 0, soit on le force à 0 pour voir les plaques en cours
 if (isset($_GET["semis"])) {

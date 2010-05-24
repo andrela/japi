@@ -20,13 +20,7 @@
 </table>
 </p>
 <?php
-$conn_string = "host=localhost port=5432 dbname=bastide user=andre password=loboG69";
-		$dbconn = pg_connect($conn_string);
-
-		if (!$dbconn) {
-		echo "An error occured.\n";
-		exit;
-		}
+include('bastide.php');
 $nr_famnew = $_POST["nr_famnew"];
 $nom = $_POST["nom"];
 $latin = $_POST["latin"];

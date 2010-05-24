@@ -7,13 +7,7 @@
    setlocale (LC_ALL, 'fr_FR.UTF-8');
    $dateheure=strftime( "Aujourdhui,le %A %d %B %Y à %H:%M:%S");
    $date=strftime("%d/%m/%Y");
-		$conn_string = "host=localhost port=5432 dbname=bastide user=andre password=loboG69";
-		$dbconn = pg_pconnect($conn_string);
-
-		if (!$dbconn) {
-		echo "An error occured.\n";
-		exit;
-	}
+include('bastide.php');
 // Test pour savoir si on sème dans le pot direct
 if ( isset ($_GET["pot"])) {
 // Test pour savoir si pot est à 0, on veut tous les pots en cours 

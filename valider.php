@@ -6,13 +6,7 @@
 <br>
 <p><b><font color="#FF0000" >Les valeurs suivantes ont été ajoutées à la table des semences</font></b>
 <?php
-$conn_string = "host=localhost port=5432 dbname=bastide user=andre password=loboG69";
-		$dbconn = pg_pconnect($conn_string);
-
-		if (!$dbconn) {
-		echo "An error occured.\n";
-		exit;
-		}
+include('bastide.php');
 if (!empty($_POST["fourg"])) {
 					$fourg = $_POST["fourg"];
                    $result = pg_query ($dbconn, "SELECT nr_four 

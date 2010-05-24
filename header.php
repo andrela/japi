@@ -18,13 +18,7 @@ else
 }
 ?>
 <?php
-$conn_string = "host=localhost port=5432 dbname=bastide user=andre password=loboG69";
-$dbconn = pg_pconnect($conn_string);
-
-if (!$dbconn) {
-    echo "An error occured.\n";
-    exit;
-}
+include('bastide.php');
 #$categ,$sorteg,$vareg,$semence,$sachet;
 // Premier tri ordonné du semis à la planche si un semis est sélectionné
 

@@ -6,13 +6,7 @@
    $dateheure=strftime( "Aujourdhui,le %A %d %B %Y à %H:%M:%S");
    $date=strftime("%d/%m/%Y");
 
-$conn_string = "host=localhost port=5432 dbname=bastide user=andre password=loboG69";
-		$dbconn = pg_pconnect($conn_string);
-
-		if (!$dbconn) {
-		echo "An error occured.\n";
-		exit;
-		}
+include('bastide.php');
 ?>
 <div class="box">
 <b> Le sachet de <font color=\"#e1451b\"> <?php echo trim($sort);?></font><font color=\"#f91616\">  <?php echo trim($vare);?>!!</font><br>

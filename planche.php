@@ -6,13 +6,7 @@
    $dateheure=strftime( "Aujourdhui,le %A %d %B %Y à %H:%M:%S");
    $date=strftime("%d/%m/%Y");
 
-		$conn_string = "host=localhost port=5432 dbname=bastide user=andre password=loboG69";
-		$dbconn = pg_pconnect($conn_string);
-
-		if (!$dbconn) {
-		echo "An error occured.\n";
-		exit;
-		}
+include('bastide.php');
 // Semer direct au champ à partir de sachet1.php
 if (!empty ($_POST["plad"])) {
 $nom = $_POST["nom"];

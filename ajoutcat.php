@@ -19,13 +19,7 @@
 </p>
 </div>
 <?php
-		$conn_string = "host=localhost port=5432 dbname=bastide user=andre password=loboG69";
-		$dbconn = pg_pconnect($conn_string);
-
-		if (!$dbconn) {
-		echo "An error occured.\n";
-		exit;
-		}
+include('bastide.php');
 $nrcatnew = $_POST["nrcatnew"];
 $nom = $_POST["nom"];
 $coment = $_POST["coment"];

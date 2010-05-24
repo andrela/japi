@@ -22,13 +22,7 @@
 </table>
 </p>
 <?php
-$conn_string = "host=localhost port=5432 dbname=bastide user=andre password=loboG69";
-		$dbconn = pg_connect($conn_string);
-
-		if (!$dbconn) {
-		echo "An error occured.\n";
-		exit;
-		}
+include('bastide.php');
 $nrsortnew = $_POST["nrsortnew"];
 $nom = $_POST["nom"];
 $nr_cat= $_POST["nr_cat"];
